@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Akaya Telivigala", system-ui;
+    box-sizing: content-box;
+}
+ body{
+    background: rgb(214, 118, 39);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .container {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 7px;
+ }
+ .todo-app{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    justify-content: center;
+ }
+ .body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(172, 250, 108);
+    border-radius: 35px;
+    margin-bottom: 25px;
+ }
+ .body input {
+   border: none;
+   padding:15px 0;
+   font-size: 20px;
+   outline: none;
+   background: transparent;
+   padding: 15px,0;
+   font-size: 20px;
+ }
+ .body img {
+   cursor: pointer;
+   height: 30px;
+   width: 30px;
+   padding: 15px;
+   background: white;
+   border-radius: 40px;
+
+ }
+ ul li {
+   list-style: none;
+   font-size: 15px;
+   cursor: pointer;
+   padding: 7px;
+ }
+ li{
+   display: flex;
+   background: rgb(62, 128, 62);
+   border-radius: 5px;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 10px;
+ }
+ .todo-controls {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  margin-right: 5px;
+ }
+ h5{
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(255, 213, 0);
+ }
+
+ li{
+  opacity: 0;
+animation: new-item-animation 0.3s linear forwards ;
+
+}
+@keyframes new-item-animation{
+  from {
+    opacity: 0;
+    transform: translateY(-350px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+li.deleted-item{
+  animation: removed-item-animation 1s cubic-bezier(0.65, -0.05,0.81,0.84) forwards;
+  transform-origin:0% 100% ;
+}
+@keyframes removed-item-animation {
+  0%{
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(550px) rotate(90deg);
+  }
+}
+
+ .togggleMe{
+  animation: hideMe 5s forwards;
+ }
+ @keyframes hideMe {
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+ }
+
+ 
+ 

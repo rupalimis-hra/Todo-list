@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+        <h1>TO-DO LIST</h1>
+        <img src="image/clipboard.webp" height="30px"/>
+        </div>
+        
+    
+    <div class="body"> 
+        <input type="text" id="text" class="input" placeholder="write your task"/>
+
+        <img src="image/plus.png" alt="+" id="AddUpdateClick" onclick="CreateToDoData()" />
+    </div>
+    <h5  id="AlertMessage"></h5>
+    <ul id="list-items" class="list-items"></ul>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
